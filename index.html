@@ -36,7 +36,7 @@
 
     <style type="text/css">
         /* Libro 3D  */
-
+        body {  min-width:600px; }
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +45,7 @@
 }
 
 .libro {
+
   width: 350px;
   height: 475px;
   margin: 20px auto 0;
@@ -70,6 +71,7 @@
 }
 
 .libro img {
+    outline: 1px solid transparent;
   display: block;
   height: 475px;
   width: 350px;
@@ -89,6 +91,7 @@
 }
 
 .libro:before {
+    outline: 1px solid transparent;
   height: 100%;
   width: 40px;
   position: absolute;
@@ -124,6 +127,7 @@
 }
 
 .libro span {
+
   display: block;
   position: absolute;
   bottom: -13px;
@@ -143,6 +147,12 @@
   -o-transform: rotate(5deg) skew(-35deg);
   -ms-transform: rotate(5deg) skew(-35deg);
   transform: rotate(5deg) skew(-35deg);
+}
+
+header{
+    /*background: url(../img/bg-pattern.png),#dc2430;*/
+    /*background: url(../img/bg-pattern.png),-webkit-linear-gradient(to left,#dc2430,#6224dc);*/
+    /*background-image: url(../img/bg-pattern.png), linear-gradient(to left, rgb(123, 67, 151), rgb(220, 36, 48));*/
 }
     </style>
 <style type="text/css">
@@ -225,7 +235,7 @@
                         
                         <div class="libro">
                           <span></span>
-                          <img src="./img/wiyh.jpeg" alt="" />
+                          <img id="lazyload" src="./img/wiyh.jpeg" alt="" />
                         </div>
                         <script type="text/javascript">
                             /*
@@ -273,11 +283,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3">
-
-                </div>
-                <div class="col-md-8">
-                        <div class="flipbook-viewport">
+                <div class="col-md-12 text-center" style="margin-left: 0px;" align="center">
+                        <div class="flipbook-viewport" align="center">
                             <!-- <div class="container"> -->
                             <div class="flipbook">
                                 <div style="background-image:url(basic/pages/1.jpg)"></div>
@@ -411,7 +418,9 @@ yepnope({
 
     complete: loadApp
 });
-
+$(document).ready(function(){
+    $('.libro').css({'opacity':0}).animate({'opacity':1},3000);
+});
 </script>
 </body>
 
