@@ -36,6 +36,27 @@
 
     <style type="text/css">
         /* Libro 3D  */
+        section.cta{
+          background-image:url(./img/2.jpg)!important;
+        }
+        .color-black{
+          color: black !important;
+        }
+
+        .wiyh-h1{
+            text-shadow: 1px 2px 5px #000;
+            font-weight: 700;
+        }
+        
+        .hoverzoomin{
+          box-shadow: 0px 0px 2px 2px #333;
+          border-radius: 8px;
+          /*border: 3px solid black;*/
+          transition: all ease 0.4s;
+        }
+        .hoverzoomin:hover{
+          transform: scale(1.2);
+        }
         body {  min-width:600px; }
 * {
   margin: 0;
@@ -69,7 +90,10 @@
   transform-style: preserve-3d;
   transform: scaleX(0.88) scaleY(0.95);
 }
-
+.page-wrapper{
+    outline: 1px solid transparent;
+    
+}
 .libro img {
     outline: 1px solid transparent;
   display: block;
@@ -226,7 +250,7 @@ header{
                     <div class="header-content">
                         <div class="header-content-inner">
                             <h1 class="myfont h1cust"> &ldquo;When.. whispers of mind,<br><span class="h1subspan"> heard by the heart...&rdquo; </span></h1>
-                            <a href="#download" class="btn btn-outline btn-xl page-scroll">Get it from kindel now </a>
+                            <a href="#download" class="btn btn-outline btn-xl page-scroll">Get it from kindle now </a>
                         </div>
                     </div>
                 </div>
@@ -310,11 +334,11 @@ header{
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h2 class="section-heading">Discover what all the buzz is about!</h2>
-                    <p>Our app is available on any mobile device! Download now to get started!</p>
+                    <h2 class="section-heading wiyh-h1">&ldquo;Where is your home?&rdquo;</h2>
+                    <p class="color-black">Book will before exclusively available on Kindle App!</p>
                     <div class="badges">
-                        <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
-                        <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
+                        <a class="badge-link hoverzoomin" href="https://read.amazon.in/kp/embed?asin=B00L2KEX1E&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_qkOxybGXZT3ED"><img src="img/kindle-b.png" alt=""></a>
+
                     </div>
                 </div>
             </div>
@@ -351,7 +375,7 @@ header{
     <footer>
         <div class="container">
             <p>&copy; 2016 Alpesh Darji. All Rights Reserved.</p>
-            <ul class="list-inline">
+           <!--  <ul class="list-inline">
                 <li>
                     <a href="#">Privacy</a>
                 </li>
@@ -361,7 +385,7 @@ header{
                 <li>
                     <a href="#">FAQ</a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </footer>
 
